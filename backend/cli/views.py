@@ -23,11 +23,11 @@ class CommandAPIView(APIView):
         create_repo_pattern = re.compile(
             (
                 r"^create_repo (?P<name>\S+)"
-                r"( --vis (?P<visibility>\S*))?"
                 r"( --desc (?P<description>\S*))?"
                 r"( --gitignore (?P<gitignore_template>\S*))?"
-                r"( --license (?P<license_template>\S*))?"
                 r"( --home (?P<homepage>\S*))?"
+                r"( --license (?P<license_template>\S*))?"
+                r"( --vis (?P<visibility>\S*))?"
             )
         )
 
@@ -37,6 +37,8 @@ class CommandAPIView(APIView):
                 instance = RepoModel()
                 instance.name = response["name"]
                 instance.url = response["url"]
+                instance.issues_count = response["open_issues_count"]
+                instance.readme = f"# {response['name']}"
                 instance.save()
 
             finally:
