@@ -22,8 +22,6 @@ def create_repo(match):
         "license_template": license_template,
     }
 
-    print(body)
-
     body = {k: v for (k, v) in body.items() if v != None}
 
     response = requests.post(

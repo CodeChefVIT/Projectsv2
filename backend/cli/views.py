@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from .serializers import CommandSerializer
-from .models import RepoModel
+from project.models import RepoModel
 
 import re
 
@@ -37,8 +37,6 @@ class CommandAPIView(APIView):
                 instance = RepoModel()
                 instance.name = response["name"]
                 instance.url = response["url"]
-                instance.issues_count = response["open_issues_count"]
-                instance.readme = f"# {response['name']}"
                 instance.save()
 
             finally:
