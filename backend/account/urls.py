@@ -1,5 +1,8 @@
-from django.conf.urls import url, include
-from django.conf import settings
-from django.contrib.auth import logout
+from django.conf.urls import url
 
-urlpatterns = []
+from . import views
+
+urlpatterns = [
+    url(r"^login/$", views.LoginAPIView.as_view(), name="login"),
+    url(r"^login/refresh/$", views.RefreshAPIView.as_view(), name="refresh"),
+]

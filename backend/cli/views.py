@@ -1,14 +1,13 @@
-from django.shortcuts import render
-
-from .serializers import CommandSerializer
-from project.models import RepoModel
-
 import re
 
+from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
+from project.models import RepoModel
+
 from . import utilities
+from .serializers import CommandSerializer
 
 # Create your views here.
 
