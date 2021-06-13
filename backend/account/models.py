@@ -1,16 +1,18 @@
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models
-from django.utils import timezone
-from django.utils.translation import gettext_lazy
 
 from .managers import UserManager
 
 
 class User(AbstractBaseUser, PermissionsMixin):
-    # username = models.CharField(max_length=20, unique=True)
+    username = models.CharField(max_length=20)
     uuid = models.UUIDField(unique=True, primary_key=True)
-    is_admin = models.BooleanField(default=False)
-    is_user = models.BooleanField(default=True)
+    is_active = models.BooleanField(default=True)
+    ROLE_CHOICES = (
+        ("user", "User"),
+        ("admin", "Admin"),
+    )
+    role = models.CharField(max_length=20, choices=ROLE_CHOICES, default="user")
 
     USERNAME_FIELD = "uuid"
     REQUIRED_FIELDS = []

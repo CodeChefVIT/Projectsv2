@@ -2,6 +2,7 @@ import requests
 from decouple import config
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.permissions import IsAuthenticated
 
 from .models import RepoModel
 
@@ -9,8 +10,10 @@ from .models import RepoModel
 
 
 class ProjectDataAPIView(APIView):
-    def get(self, request):
+    permission_classes = (IsAuthenticated,)
 
+    def get(self, request):
+        
         model_data = RepoModel.objects.all().values_list("url")
         data = []
 

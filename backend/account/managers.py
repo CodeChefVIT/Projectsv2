@@ -14,12 +14,10 @@ class UserManager(BaseUserManager):
 
     def create_superuser(self, uuid, password, **info):
 
-        info.setdefault("is_user", True)
-        info.setdefault("is_admin", True)
-        # info.setdefault("is_active", True)
+        info.setdefault("is_active", True)
+        info.setdefault("role", "admin")
 
-        if info.get("is_user") is not True:
-            raise ValueError(ugettext_lazy("Superuser must have is_user=True."))
-        if info.get("is_admin") is not True:
-            raise ValueError(ugettext_lazy("Superuser must have is_admin=True."))
+        if info.get("role") != "admin":
+            raise ValueError(ugettext_lazy("Superuser must have admin role"))
+            
         return self.create_user(uuid, password, **info)

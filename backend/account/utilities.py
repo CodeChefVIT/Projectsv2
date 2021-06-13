@@ -4,12 +4,12 @@ import jwt
 from django.conf import settings
 
 
-def generate_access_token(uuid, is_admin):
+def generate_access_token(uuid, role):
 
     payload = {
         "uuid": str(uuid),
-        "is_admin": is_admin,
-        "exp": datetime.datetime.now() + datetime.timedelta(hours=1),
+        "role": role,
+        "exp": datetime.datetime.now() + datetime.timedelta(minutes=15),
         "iat": datetime.datetime.now(),
     }
 
@@ -18,12 +18,12 @@ def generate_access_token(uuid, is_admin):
     return access_token
 
 
-def generate_refresh_token(uuid, is_admin):
+def generate_refresh_token(uuid, role):
 
     payload = {
         "uuid": str(uuid),
-        "is_admin": is_admin,
-        "exp": datetime.datetime.now() + datetime.timedelta(days=1),
+        "role": role,
+        "exp": datetime.datetime.utcnow() + datetime.timedelta(days=1),
         "iat": datetime.datetime.now(),
     }
 

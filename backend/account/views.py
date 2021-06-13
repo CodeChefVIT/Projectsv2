@@ -12,7 +12,32 @@ from .utilities import generate_access_token, generate_refresh_token
 # Create your views here.
 
 
-class LoginAPIView(APIView):
+class AuthAdminAPIView(APIView):
+    permission_classes = (AllowAny,)
+
+    def post(self, request):
+        User = get_user_model()
+
+        serializer = LoginSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        uuid = serializer.validated_data["uuid"]
+
+        User.objects.get_or_create(uuid=uuid, role="admin")
+
+        access_token = generate_access_token(uuid, "admin")
+        refresh_token = generate_refresh_token(uuid, "admin")
+
+        response = {
+            "access": access_token,
+            "refresh": refresh_token,
+        }
+
+        return Response(response)
+
+
+
+class AuthAPIView(APIView):
     permission_classes = (AllowAny,)
 
     def post(self, request):
@@ -25,9 +50,8 @@ class LoginAPIView(APIView):
 
         User.objects.get_or_create(uuid=uuid)
 
-        is_admin = False
-        access_token = generate_access_token(uuid, is_admin)
-        refresh_token = generate_refresh_token(uuid, is_admin)
+        access_token = generate_access_token(uuid, "user")
+        refresh_token = generate_refresh_token(uuid, "user")
 
         response = {
             "access": access_token,
@@ -54,7 +78,7 @@ class RefreshAPIView(APIView):
         except jwt.ExpiredSignatureError:
             raise AuthenticationFailed("Token Expired!")
 
-        access_token = generate_access_token(payload["uuid"], payload["is_admin"])
+        access_token = generate_access_token(payload["uuid"], payload["role"])
 
         response = {
             "access": access_token,
