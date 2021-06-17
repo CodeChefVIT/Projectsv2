@@ -23,7 +23,9 @@ class AuthAdminAPIView(APIView):
 
         uuid = serializer.validated_data["uuid"]
 
-        User.objects.get_or_create(uuid=uuid, role="admin")
+        user, created = User.objects.get_or_create(uuid=uuid)
+        user.role = "admin"
+        user.save()
 
         access_token = generate_access_token(uuid, "admin")
         refresh_token = generate_refresh_token(uuid, "admin")

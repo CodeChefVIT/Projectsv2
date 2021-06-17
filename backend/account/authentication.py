@@ -20,7 +20,7 @@ class JWTAuthentication(BaseAuthentication):
             )
 
         except jwt.ExpiredSignatureError:
-            raise exceptions.AuthenticationFalied("Access token has expired!")
+            raise exceptions.AuthenticationFailed("Access token has expired!")
 
         except IndexError:
             raise exceptions.AuthenticationFalied("Token missing!")
