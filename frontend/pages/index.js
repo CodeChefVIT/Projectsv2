@@ -5,8 +5,12 @@ import Navbar from '../comps/mainnavbar/Navbar'
 
 export default function Home() {
   return (
-    <div>
+    <body>
       <Navbar />
-    </div>
+      <div className="image">
+        {/* <img src="/Background(hero).png" alt="herobg" /> */}
+        <img src="/image 1.png" alt="image" />
+      </div>
+    </body>
   )
 }

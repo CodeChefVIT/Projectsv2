@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
 
 
-
-
 *{
   font-family: "Nunito";
 }
@@ -13,16 +11,13 @@ a {
 }
 
 nav {
- 
-  margin: 20px 50px 50px;
+  margin: -70px 50px 50px;
   padding: 10px 0;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  border-bottom: 1px solid #ddd;
   color: white;
 }
-
 nav a {
   margin-left: 25px;
 }
