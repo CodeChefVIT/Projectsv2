@@ -1,0 +1,22 @@
+{
+  "name": "projectsv2",
+  "version": "1.0.0",
+  "description": "<p align=\"center\"><a href=\"https://www.codechefvit.com\" target=\"_blank\"><img src=\"https://s3.amazonaws.com/codechef_shared/sites/all/themes/abessive/logo-3.png\" title=\"CodeChef-VIT\" alt=\"Codechef-VIT\"></a>\r </p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahas-01/Projectsv2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sahas-01/Projectsv2/issues"
+  },
+  "homepage": "https://github.com/sahas-01/Projectsv2#readme",
+  "dependencies": {
+    "create-next-app": "^11.0.1"
+  }
+}
