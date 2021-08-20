@@ -1,16 +1,19 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import Navbar from '../comps/topnavbar/Navbar'
+
 import styles from '../styles/Home.module.css'
-import Navbar from '../comps/mainnavbar/Navbar'
+import Hero from '../comps/Homesection/Hero'
+import Projecttext from '../comps/Projectsheading/Ourprojects'
+import Navbar2 from '../comps/Secondnavbar/Navbar2'
 
 export default function Home() {
   return (
-    <body>
-      <Navbar />
-      <div className="image">
-        {/* <img src="/Background(hero).png" alt="herobg" /> */}
-        <img src="/image 1.png" alt="image" />
-      </div>
-    </body>
+    <>
+    <Navbar />
+    <Hero />
+    <Projecttext />
+    <Navbar2 />
+
+    </>
   )
 }
