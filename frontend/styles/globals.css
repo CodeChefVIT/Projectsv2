@@ -3,21 +3,8 @@
 
 *{
   font-family: "Nunito";
+  margin: 0;
+  padding: 0;
 }
 
-a {
-  color: #333;
-  text-decoration: none;
-}
 
-nav {
-  margin: -70px 50px 50px;
-  padding: 10px 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  color: white;
-}
-nav a {
-  margin-left: 25px;
-}
