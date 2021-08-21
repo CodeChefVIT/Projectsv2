@@ -1,10 +1,11 @@
 import Head from 'next/head'
-import Navbar from '../comps/topnavbar/Navbar'
+import Navbar from '../components/topnavbar/Navbar'
 
 import styles from '../styles/Home.module.css'
-import Hero from '../comps/Homesection/Hero'
-import Projecttext from '../comps/Projectsheading/Ourprojects'
-import Navbar2 from '../comps/Secondnavbar/Navbar2'
+import Hero from '../components/Homesection/Hero'
+import Projecttext from '../components/Projectsheading/Ourprojects'
+import Navbar2 from '../components/Secondnavbar/Navbar2'
+import Footer from "../components/footer/footer";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
     <Hero />
     <Projecttext />
     <Navbar2 />
+      <Footer/>
 
     </>
   )

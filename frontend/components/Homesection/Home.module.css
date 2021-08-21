@@ -4,30 +4,28 @@
 .showcase{
     min-height: 600px;
     text-align: center;
-    background: url('../../public/cc-proj2.jpg');
+    background: url('../../public/assets/cc-proj2.jpg'), rgba(0,0,0,0.4);
     background-position-x: center;
     background-position-y: -75px;
     width: 100%;
     overflow-x: hidden;
-    filter: blur(0.5);
 }
 
 .showcase .container .heading1{
     padding-top: 200px;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
     font-family: 'Nunito', sans-serif;
     font-weight: 900;
-    font-size: 35px;
+    font-size: 40px;
     color: azure;
 
 }
 
 .showcase .container .para{
     color: rgb(236, 236, 236);
-    font-size: 45px;
+    font-size: 32px;
     font-weight: 700;
     font-family: 'Nunito', sans-serif;
-    letter-spacing: 1.1px;
     margin-top: 10px;
 
 }
