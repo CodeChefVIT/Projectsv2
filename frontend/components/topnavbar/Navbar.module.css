@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
-.header{
+.nav {
     background: black;
     color: white;
     height: 85px;
@@ -8,26 +8,27 @@
     /* position: relative; */
     /* position: fixed; */
     width: 100%;
-}
-
-
-.nav{
     display: flex;
     float: right;
     /* position: fixed; */
 }
 
-.nav .ul{
+.logoimage {
+    display: inline-flex;
+    margin-right: 40rem;
+}
+
+.nav .ul {
     display: flex;
     margin: 30px 20px;
 }
 
-.nav .ul .listitems{
+.nav .ul .listitems {
     list-style: none;
     /* margin: 10px; */
 }
 
-.nav .ul .listitems .listlink{
+.nav .ul .listitems .listlink {
     text-decoration: none;
     color: white;
     /* // text-transform: uppercase; */
@@ -35,5 +36,5 @@
     padding: 15px;
     font-size: 16px;
     /* // font-weight: 600; */
-    
+
 }

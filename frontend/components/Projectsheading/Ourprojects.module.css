@@ -9,8 +9,7 @@
 
 .content{
     display: flex;
-    
-    color: white;
+    color: azure;
     flex-direction: column;
     align-items: center;
 }
@@ -18,7 +17,12 @@
 .content .ourprojects{
     font-family: 'Nunito', sans-serif;
     margin: 60px auto;
-    font-size: 35.5px;
+    padding-bottom: 4px;
+    border-bottom: 4px solid #F2B516;
+    border-radius: 2px;
+    width: max-content;
+    font-weight: 700;
+    font-size: 35px;
 }
 
 .content .projectContent{
@@ -26,6 +30,6 @@
     font-family: 'Nunito', sans-serif;
     font-size: 20.5px;
     line-height: 2em;
-    color: rgba(255, 255,255,0.6);
+    color: rgba(255, 255,255,0.8);
     
 }
