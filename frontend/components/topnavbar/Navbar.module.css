@@ -13,11 +13,6 @@
     /* position: fixed; */
 }
 
-.logoimage {
-    display: inline-flex;
-    margin-right: 40rem;
-}
-
 .nav .ul {
     display: flex;
     margin: 30px 20px;
