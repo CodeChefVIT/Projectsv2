@@ -9,6 +9,10 @@
   padding: 0;
 }
 
+footer{
+  background: #050505 !important;
+}
+
 ::-webkit-scrollbar {
   width: 0.5rem;
   background: #121212;
