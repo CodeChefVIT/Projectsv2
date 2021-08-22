@@ -3,10 +3,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Nunito';
+  src: local('Nunito'), url(https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap);
+}
+
 *{
-  font-family: "Nunito" !important;
+  font-family: 'Nunito' !important;
   margin: 0;
   padding: 0;
+}
+
+footer{
+  background: #050505 !important;
 }
 
 ::-webkit-scrollbar {
