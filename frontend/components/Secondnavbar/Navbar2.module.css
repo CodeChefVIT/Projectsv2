@@ -1,8 +1,9 @@
 .nav{
     height: auto;
-    width: max-width;
+    width: auto;
     background-color: rgb(0, 0, 0);
     color: white;
+    /* margin-top: 2em; */
 
 }
 
