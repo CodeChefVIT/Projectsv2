@@ -2,7 +2,7 @@
 
 
 .section{
-    height: auto;
+    height:350px;
     width: max-width;
     background:  #111111;
 }
@@ -32,4 +32,34 @@
     line-height: 2em;
     color: rgba(255, 255,255,0.8);
     
+}
+
+@media screen and (max-width: 600px) {
+
+    .section{
+        height: 375px;
+        width: max-width;
+        background:  #111111;
+    }
+
+    .content .ourprojects{
+        font-family: 'Nunito', sans-serif;
+        margin: 60px auto;
+        padding-bottom: 4px;
+        border-bottom: 4px solid #F2B516;
+        border-radius: 2px;
+        width: max-content;
+        font-weight: 700;
+        font-size: 32px;
+    }
+
+
+    .content .projectContent{
+        margin: auto 1.5em 1em 1.5em;
+        font-family: 'Nunito', sans-serif;
+        font-size: 18.5px;
+        line-height: 2em;
+        color: rgba(255, 255,255,0.8);
+        
+    }
 }
