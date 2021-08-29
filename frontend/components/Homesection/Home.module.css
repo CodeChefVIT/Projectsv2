@@ -33,3 +33,48 @@
 .yellow{
     color: #F2B516;
 }
+
+@media screen and (max-width:600px) {
+    .showcase .container .heading1{
+        padding: 175px 20px 0px 20px;
+        margin-bottom: 60px;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 800;
+        font-size: 2.1rem;
+        color: azure;
+        
+    
+    }
+    
+    .showcase .container .para{
+        color: rgb(236, 236, 236);
+        font-size: 1.9em;
+        font-weight: 800;
+        font-family: 'Nunito', sans-serif;
+        padding: 0px 20px;
+        /* margin-top: 10px; */
+    
+    }
+}
+
+
+@media screen and (max-width:420px) {
+    .showcase .container .heading1{
+        padding: 175px 5px 0px 5px;
+        margin-bottom: 40px;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 800;
+        font-size: 2rem;
+        color: azure;
+    }
+
+    .showcase .container .para{
+        color: rgb(236, 236, 236);
+        font-size: 1.75em;
+        font-weight: 800;
+        font-family: 'Nunito', sans-serif;
+        padding: 0px 10px;
+        /* margin-top: 10px; */
+    
+    }
+}

@@ -1,35 +1,36 @@
-.nav{
-    height: auto;
-    width: auto;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    /* margin-top: 2em; */
-
+.nav {
+    background: rgb(0, 0, 0);
+    padding: 20px 15px 20px;
 }
 
-.navbar2{
+.nav .items {
     display: flex;
     justify-content: center;
-    border-radius: 20px;
-    /* // background-color: rgb(37, 37, 37); */
+    -webkit-padding-start: 0px;
 }
-
-.nav .li{
-    display: flex;
-    margin: 100px 20px;
-}
-
-.nav .li .items{
-    list-style: none;
-}
-
-.nav .li .items .listlink{
-    text-decoration: none;
+.nav .li {
     color: white;
-    font-family: 'Nunito', sans-serif;
-    padding: 0px;
-    font-weight: 700;
-    margin: 1em 1.2em;
-    font-size: 16px;
-    
+    display: inline-table;
+    margin: 30px 40px;
+    font-size: 18.5px;
+} 
+
+.nav .li:hover {
+    color: #F2B516;
+} 
+
+@media screen and (max-width:600px){
+
+    .nav {
+        background: rgb(0, 0, 0);
+        padding: 20px 5px 20px;
+    }
+
+    .nav .li {
+        color: white;
+        display: inline-table;
+        margin: 30px 15px;
+        font-size: 18.5px;
+        text-align: center;
+    } 
 }
