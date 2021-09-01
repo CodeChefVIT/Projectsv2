@@ -6,10 +6,10 @@ const Navbar2 = () => {
 
         <div className={nav2.nav}>
             <ul className={nav2.items}>
-                <li className={nav2.li}><Link href=""><a >2021</a></Link></li>
-                <li className={nav2.li}><Link href=""><a >2020</a></Link></li>
-                <li className={nav2.li}><Link href=""><a >2019</a></Link></li>
-                <li className={nav2.li}><Link href=""><a >2018</a></Link></li>
+                <li className={nav2.li}><Link href="/"><a >2021</a></Link></li>
+                <li className={nav2.li}><Link href="/"><a >2020</a></Link></li>
+                <li className={nav2.li}><Link href="/"><a >2019</a></Link></li>
+                <li className={nav2.li}><Link href="/"><a >2018</a></Link></li>
 
 
             </ul>
