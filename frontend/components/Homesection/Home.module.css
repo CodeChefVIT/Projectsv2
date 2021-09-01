@@ -4,7 +4,7 @@
 .showcase{
     min-height: 600px;
     text-align: center;
-    background: url('../../public/assets/cc-proj2.jpg'), rgba(0,0,0,0.4);
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../../public/assets/cc-proj2.jpg');
     background-position-x: center;
     background-position-y: -75px;
     width: 100%;
