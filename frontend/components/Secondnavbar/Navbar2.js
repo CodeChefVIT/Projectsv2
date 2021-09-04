@@ -1,16 +1,28 @@
-import Link from 'next/link'
+import { loadGetInitialProps } from 'next/dist/shared/lib/utils';
+// import Link from 'next/link'
 import nav2 from '../Secondnavbar/Navbar2.module.css'
 
-const Navbar2 = () => {
+const Navbar2 = (props) => {
+
     return (
 
         <div className={nav2.nav}>
             <ul className={nav2.items}>
-                <li className={nav2.li}><Link href="/"><a >2021</a></Link></li>
-                <li className={nav2.li}><Link href="/"><a >2020</a></Link></li>
-                <li className={nav2.li}><Link href="/"><a >2019</a></Link></li>
-                <li className={nav2.li}><Link href="/"><a >2018</a></Link></li>
-
+                <li className={nav2.li} onClick={
+                    () => {
+                        props.setYear('2021');
+                    }
+                }>2021</li>
+                <li className={nav2.li} onClick={
+                    () => {
+                        props.setYear('2020');
+                    }
+                }>2020</li>
+                <li className={nav2.li} onClick={
+                    () => {
+                        props.setYear('2019');
+                    }
+                }>2019</li>
 
             </ul>
 

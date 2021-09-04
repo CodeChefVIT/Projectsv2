@@ -1,13 +1,16 @@
-const Modal = ({ closeModal }) => {
+import { faUnderline } from "@fortawesome/free-solid-svg-icons";
+
+const Modal = ({ closeModal, project }) => {
+    const x = project.repo_contributors
     return (
-        <div className="justify-center items-center flex overflow-hidden fixed inset-0 z-50 backdrop-filter backdrop-blur-md">
-            <div className="relative sm:w-8/12 xs:w-9/12 my-6 mx-auto xs:max-w-3xl">
+        <div className="justify-center items-center flex overflow-hidden fixed inset-0 z-50 backdrop-filter backdrop-blur-sm">
+            <div className="relative sm:w-10/12 xs:w-full my-6 mx-auto xs:max-w-3xl">
                 {/*content*/}
-                <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-gray-900 outline-none focus:outline-none">
+                <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-black outline-none focus:outline-none">
                     {/*header*/}
                     <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
-                        <h3 className="text-2xl text-white font-semibold">
-                            Repo Name
+                        <h3 className="text-2xl text-white font-black">
+                            {project.repo_name}
                         </h3>
                         <svg className="mt-1 h-6 w-6 cursor-pointer p-1 bg-white hover:bg-gray-500 rounded-full"
                             fill="currentColor" viewBox="0 0 20 20" onClick={() => closeModal(false)}>
@@ -18,41 +21,61 @@ const Modal = ({ closeModal }) => {
                     </div>
                     {/*body*/}
                     <div className="relative px-6 py-4 flex-auto">
-                        <h1 className="inline text-white text-lg">Contributors: </h1>
-                        <p className="my-4 inline text-white leading-relaxed">
-                            XYZ XYZ XYZ
+                        <h1 className="inline text-white text-lg font-extrabold">Contributors: </h1>
+                        {
+                            <p className="my-4 text-white leading-relaxed">
+                                {x.map(item => {
+                                    return (
+                                        item.github_username + "\n"
+                                    );
+                                })}
+                            </p>
+                        }
+                    </div>
+                    <div className="relative px-6 py-4 flex-auto">
+                        <h1 className="inline text-white text-lg font-extrabold">Repo URL: </h1>
+                        <p className="my-4 inline text-white leading-relaxed" style={{ textDecoration: "underline" }}>
+                            <a target="_blank" href={`${project.repo_html_url}`}>{project.repo_html_url}</a>
                         </p>
                     </div>
                     <div className="relative px-6 py-4 flex-auto">
-                        <h1 className="inline text-white text-lg">Repo URL: </h1>
-                        <p className="my-4 inline text-white leading-relaxed">
-                            https://www.google.com
-                        </p>
+                        <h1 className="inline text-white text-lg font-extrabold">Issues: </h1>
+                        <span className="my-4 text-lg text-white leading-relaxed">
+                            {project.repo_issues}
+                        </span>
+                        &nbsp;
+                        &nbsp;
+                        <h1 className="inline text-white text-lg font-extrabold">Pull Requests: </h1>
+                        <span className="my-4 text-lg text-white leading-relaxed">
+                            {project.repo_pull_requests}
+                        </span>
+                        &nbsp;
+                        &nbsp;
+                        <h1 className="inline text-white text-lg font-extrabold">Languages: </h1>
+                        <span className="my-4 text-base text-white leading-relaxed">
+
+                            {
+                                project.repo_languages + " "
+
+                            }
+                        </span>
+                    </div>
+                    {/* <div className="relative px-6 py-4 flex-auto">
+                        <h1 className="inline text-white text-lg font-extrabold">Languages: </h1>
+                        <span className="my-4 text-base text-white leading-relaxed">
+
+                            {
+                                project.repo_languages + " "
+
+                            }
+                        </span>
                     </div>
                     <div className="relative px-6 py-4 flex-auto">
-                        <h1 className="inline text-white text-lg">Issues:</h1>
-                        <p className="my-4 inline text-white leading-relaxed">
-                            56
-                        </p>
-                    </div>
-                    <div className="relative px-6 py-4 flex-auto">
-                        <h1 className="inline text-white text-lg">Languages: </h1>
-                        <p className="my-4 inline text-white leading-relaxed">
-                            Javascript
-                        </p> &nbsp;
-                        <p className="my-4 inline text-white leading-relaxed">
-                            Python
-                        </p> &nbsp;
-                        <p className="my-4 inline text-white leading-relaxed">
-                            CSS
-                        </p>
-                    </div>
-                    <div className="relative px-6 py-4 flex-auto">
-                        <h1 className="inline text-white text-lg">Pull Requests:</h1>
-                        <p className="my-4 inline text-white leading-relaxed">
-                            2
-                        </p>
-                    </div>
+                        <h1 className="inline text-white text-lg font-extrabold">Pull Requests: </h1>
+                        <span className="my-4 text-lg text-white leading-relaxed">
+                            {project.repo_pull_requests}
+                        </span>
+                    </div> */}
                 </div>
             </div>
         </div>
