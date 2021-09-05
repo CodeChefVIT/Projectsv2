@@ -54,7 +54,7 @@ const Modal = ({ closeModal, project }) => {
                         &nbsp;
                         <FontAwesomeIcon icon={faCodeBranch} className="hover:text-yellow-400 ease-in-out"/>
                         <span className="my-4 text-lg text-white leading-relaxed">
-                            &nbsp;{project.repo_pull_requests}
+                            &nbsp;{project.repo_forks}
                         </span>
                         &nbsp;
                         &nbsp;
