@@ -10,7 +10,8 @@ function NavBar() {
                     <div className="flex items-center justify-between h-16">
                         <div className="flex items-center">
                             <div className="flex-shrink-0 align-middle">
-                                <a target="_blank" href="https://codechefvit.com">
+                                <a target="_blank" href="https://codechefvit.com" rel="noreferrer">
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
                                     <img src="https://i.ibb.co/4J9LXxS/cclogo.png" alt="CodeChef-VIT logo"
                                          style={{height: 80}}/></a>
                             </div>

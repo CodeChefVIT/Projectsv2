@@ -32,7 +32,7 @@ const Modal = ({ closeModal, project }) => {
                                     return (
                                         <>
                                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                                        <a href={`${item.profile_url}`} target="_blank" className="mt-2 pb-4 flex-auto content-center text-center font-medium  hover:bg-cbg"><img src={`${item.avatar_url}`} className="w-8 rounded-full mx-auto mt-2" alt="contributor img" /><br /> {item.github_username}</a>
+                                        <a href={`${item.profile_url}`} target="_blank" rel="noreferrer" className="mt-2 pb-4 flex-auto content-center text-center font-medium  hover:bg-cbg"><img src={`${item.avatar_url}`} className="w-8 rounded-full mx-auto mt-2" alt="contributor img" /><br /> {item.github_username}</a>
                                         </>
                                     )};
                                 })}
@@ -42,7 +42,7 @@ const Modal = ({ closeModal, project }) => {
                     <div className="relative px-6 py-4 flex-auto">
                         <h1 className="inline text-white text-lg font-extrabold">Repo URL: </h1>
                         <p className="my-4 inline text-white leading-relaxed" style={{ textDecoration: "underline" }}>
-                            <a target="_blank" className="hover:text-yellow-400 ease-in-out" href={`${project.repo_html_url}`}>{project.repo_html_url}</a>
+                            <a target="_blank" rel="noreferrer" className="hover:text-yellow-400 ease-in-out" href={`${project.repo_html_url}`}>{project.repo_html_url}</a>
                         </p>
                     </div>
                     <div className="relative px-6 py-4 flex-auto text-white">

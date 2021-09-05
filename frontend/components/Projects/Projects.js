@@ -34,6 +34,7 @@ const Project = () => {
                             return (
                                 <div className="my-10 mx-8" key={key}>
                                     <div className="rounded overflow-hidden shadow-lg bg-black h-full">
+                                        {/* eslint-disable-next-line @next/next/no-img-element */}
                                         <img src={`data:image/png;base64, ${item.repo_thumbnail}`} />
                                         <div className="px-6 py-4">
                                             <div className="text-white mb-2 text-2xl font-bold px-2">{item.repo_name}</div>
