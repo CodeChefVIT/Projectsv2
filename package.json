@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/sahas-01/Projectsv2#readme",
   "dependencies": {
-    "create-next-app": "^11.0.1"
+    "create-next-app": "^11.0.0"
   }
 }
