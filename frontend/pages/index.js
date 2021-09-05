@@ -14,7 +14,7 @@ export default function Home() {
     <Navbar />
     <Hero />
     <Projecttext />
-    <Navbar2 />
+    {/* <Navbar2 /> */}
     {/* <Apicall /> */}
     <Projects />
       <Footer/>
