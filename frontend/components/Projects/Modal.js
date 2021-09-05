@@ -1,4 +1,7 @@
-import { faUnderline } from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"; // Import the FontAwesomeIcon component
+import {faCodeBranch, faStar} from "@fortawesome/free-solid-svg-icons";
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import {faDotCircle} from "@fortawesome/free-solid-svg-icons/faDotCircle";
 
 const Modal = ({ closeModal, project }) => {
     const x = project.repo_contributors
@@ -6,7 +9,7 @@ const Modal = ({ closeModal, project }) => {
         <div className="justify-center items-center flex overflow-hidden fixed inset-0 z-50 backdrop-filter backdrop-blur-sm">
             <div className="relative sm:w-10/12 xs:w-full my-6 mx-auto xs:max-w-3xl">
                 {/*content*/}
-                <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-black outline-none focus:outline-none">
+                <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-cfg outline-none focus:outline-none">
                     {/*header*/}
                     <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
                         <h3 className="text-2xl text-white font-black">
@@ -20,34 +23,44 @@ const Modal = ({ closeModal, project }) => {
                         </svg>
                     </div>
                     {/*body*/}
-                    <div className="relative px-6 py-4 flex-auto">
-                        <h1 className="inline text-white text-lg font-extrabold">Contributors: </h1>
+                    <div className="relative px-6 py-4 pb-2">
+                        <h2 className="inline text-white text-lg font-extrabold">Contributors: </h2>
                         {
-                            <p className="my-4 text-white leading-relaxed">
+                            <div className="px-0 mx-auto mt-6 text-white leading-relaxed grid grid-cols-3">
                                 {x.map(item => {
+                                    if ((item.github_username!="dependabot[bot]") && (item.github_username!="CodeChefVIT-bot")){
                                     return (
-                                        item.github_username + "\n"
-                                    );
+                                        <>
+                                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                                        <a href={`${item.profile_url}`} target="_blank" className="mt-2 pb-4 flex-auto content-center text-center font-medium  hover:bg-cbg"><img src={`${item.avatar_url}`} className="w-8 rounded-full mx-auto mt-2" alt="contributor img" /><br /> {item.github_username}</a>
+                                        </>
+                                    )};
                                 })}
-                            </p>
+                            </div>
                         }
                     </div>
                     <div className="relative px-6 py-4 flex-auto">
                         <h1 className="inline text-white text-lg font-extrabold">Repo URL: </h1>
                         <p className="my-4 inline text-white leading-relaxed" style={{ textDecoration: "underline" }}>
-                            <a target="_blank" href={`${project.repo_html_url}`}>{project.repo_html_url}</a>
+                            <a target="_blank" className="hover:text-yellow-400 ease-in-out" href={`${project.repo_html_url}`}>{project.repo_html_url}</a>
                         </p>
                     </div>
-                    <div className="relative px-6 py-4 flex-auto">
-                        <h1 className="inline text-white text-lg font-extrabold">Issues: </h1>
+                    <div className="relative px-6 py-4 flex-auto text-white">
+                        <FontAwesomeIcon icon={faStar} className="hover:text-yellow-400 ease-in-out"/>
                         <span className="my-4 text-lg text-white leading-relaxed">
-                            {project.repo_issues}
+                            &nbsp;{project.stargazers_count}
                         </span>
                         &nbsp;
                         &nbsp;
-                        <h1 className="inline text-white text-lg font-extrabold">Pull Requests: </h1>
+                        <FontAwesomeIcon icon={faCodeBranch} className="hover:text-yellow-400 ease-in-out"/>
                         <span className="my-4 text-lg text-white leading-relaxed">
-                            {project.repo_pull_requests}
+                            &nbsp;{project.repo_pull_requests}
+                        </span>
+                        &nbsp;
+                        &nbsp;
+                        <FontAwesomeIcon icon={faDotCircle} className="hover:text-yellow-400 ease-all"/>
+                        <span className="my-4 text-lg text-white leading-relaxed">
+                            &nbsp;{project.repo_issues}
                         </span>
                         &nbsp;
                         &nbsp;

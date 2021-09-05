@@ -22,7 +22,7 @@ const Footer = () => {
                 <a target="_blank" href="https://codechefvit.com">
                     <img src="https://i.ibb.co/4J9LXxS/cclogo.png" alt="Footer CodeChef-VIT logo"
                          style={{height: 120, marginBottom: 40}}/></a></div>
-                CodeChef-VIT is a non-commercial organization with a goal to provide a platform for programmers and
+                <span className="font-bold">CodeChef-VIT</span> is a non-commercial organization with a goal to provide a platform for programmers and
                 developers everywhere to meet, compete & have fun. At CodeChef-VIT, we believe in the words of Matt
                 Mullenweg - <i>“Technology is best when it brings people together”</i>.
                 <br/><br/>
