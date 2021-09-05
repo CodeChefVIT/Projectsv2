@@ -12,7 +12,8 @@ module.exports = {
     },
     extend: {
       colors:{
-        cbg: '#111111',
+        cbg: '#0A0A0A',
+        cfg: '#111111',
       }
     },
   },

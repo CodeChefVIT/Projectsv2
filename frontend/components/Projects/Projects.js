@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import Modal from './Modal';
 import axios from "axios";
 import Navbar2 from '../Secondnavbar/Navbar2'
-// import { render } from '@headlessui/react/dist/utils/render';
-// import React, { useState } from 'react'
 
 const Project = () => {
 

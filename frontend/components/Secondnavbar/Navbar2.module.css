@@ -1,6 +1,7 @@
 .nav {
-    background: rgb(0, 0, 0);
+    background: #0A090A;
     padding: 20px 15px 20px;
+    font-weight: 700;
 }
 
 .nav .items {
