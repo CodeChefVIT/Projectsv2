@@ -19,7 +19,8 @@ const Footer = () => {
             <div className="container mx-auto px-4">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <div className="sm:mx-auto sm:justify-center">
-                <a target="_blank" href="https://codechefvit.com">
+                <a target="_blank" href="https://codechefvit.com" rel="noreferrer">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src="https://i.ibb.co/4J9LXxS/cclogo.png" alt="Footer CodeChef-VIT logo"
                          style={{height: 120, marginBottom: 40}}/></a></div>
                 <span className="font-bold">CodeChef-VIT</span> is a non-commercial organization with a goal to provide a platform for programmers and
@@ -30,11 +31,11 @@ const Footer = () => {
                     <div className="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
                         <ul className="list-none footer-links">
                             <li className="mb-2">
-                                <a href="https://codechefvit.com" target="_blank"
+                                <a href="https://codechefvit.com" target="_blank" rel="noreferrer"
                                    className="border-b border-solid border-transparent ease-in-out transition-all hover:text-yellow-400">Home</a>
                             </li>
                             <li className="mb-2">
-                                <a href="https://codechefvit.com/events" target="_blank"
+                                <a href="https://codechefvit.com/events" target="_blank" rel="noreferrer"
                                    className="border-b border-solid border-transparent ease-in-out transition-all hover:text-yellow-400">Events</a>
                             </li>
                         </ul>
@@ -42,11 +43,11 @@ const Footer = () => {
                     <div className="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
                         <ul className="list-none footer-links">
                             <li className="mb-2">
-                                <a href="https://medium.com/codechef-vit" target="_blank"
+                                <a href="https://medium.com/codechef-vit" target="_blank" rel="noreferrer"
                                    className="border-b border-solid border-transparent ease-in-out transition-all hover:text-yellow-400">Blogs</a>
                             </li>
                             <li className="mb-2">
-                                <a href="https://codechefvit.com/webinars" target="_blank"
+                                <a href="https://codechefvit.com/webinars" target="_blank" rel="noreferrer"
                                    className="border-b border-solid border-transparent ease-in-out transition-all hover:text-yellow-400">Webinars</a>
                             </li>
                         </ul>
@@ -54,11 +55,11 @@ const Footer = () => {
                     <div className="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
                         <ul className="list-none footer-links">
                             <li className="mb-2">
-                                <a href="https://codechefvit.com/team" target="_blank"
+                                <a href="https://codechefvit.com/team" target="_blank" rel="noreferrer"
                                    className="border-b border-solid border-transparent ease-in-out transition-all hover:text-yellow-400">Team</a>
                             </li>
                             <li className="mb-2">
-                                <a href="https://codechefvit.com/sponsors" target="_blank"
+                                <a href="https://codechefvit.com/sponsors" target="_blank" rel="noreferrer"
                                    className="border-b border-solid border-transparent ease-in-out transition-all hover:text-yellow-400">Sponsors</a>
                             </li>
                         </ul>
@@ -66,39 +67,38 @@ const Footer = () => {
                     <div className="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
                         <ul className="list-none footer-links">
                             <li className="mb-2">
-                                <a href="https://projects.codechefvit.com" target="_blank"
-                                   className="border-b border-solid border-transparent ease-in-out transition-all hover:text-yellow-400"
-                                   rel="noreferrer">Projects</a>
+                                <a href="https://projects.codechefvit.com" target="_blank" rel="noreferrer"
+                                   className="border-b border-solid border-transparent ease-in-out transition-all hover:text-yellow-400">Projects</a>
                             </li>
                         </ul>
                     </div>
                     <div className="px-4 mt-4 sm:w-1/2  xl:w-1/4 sm:mx-auto xl:mt-0 xl:ml-auto sm:mt-5">
                         <div className="flex sm:justify-center xl:justify-start">
-                            <a href="https://facebook.com/codechefvit" target="_blank"
+                            <a href="https://facebook.com/codechefvit" target="_blank" rel="noreferrer"
                                className="w-8 h-8 border border-2  border-gray-300 bg-gray-50 rounded-full text-center py-1 text-black hover:text-white ease-in transition-all hover:bg-blue-600 hover:border-blue-600">
                                 <i className="fab fa-facebook"><FontAwesomeIcon icon={faFacebookF}/></i>
                             </a>
-                            <a href="https://twitter.com/codechefvit" target="_blank"
+                            <a href="https://twitter.com/codechefvit" target="_blank" rel="noreferrer"
                                className="w-8 h-8 border border-2  border-gray-300 bg-gray-50 rounded-full text-center py-1 ml-2 text-black ease-in-out transition-all hover:text-white hover:bg-blue-400 hover:border-blue-400">
                                 <FontAwesomeIcon icon={faTwitter}/>
                             </a>
-                            <a href="https://linkedin.com/company/codechef-vit-chapter" target="_blank"
+                            <a href="https://linkedin.com/company/codechef-vit-chapter" target="_blank" rel="noreferrer"
                                className="w-8 h-8 border border-2  border-gray-300 bg-gray-50 rounded-full text-center py-1 ml-2 text-black ease-in-out transition-all hover:text-white hover:bg-blue-800 hover:border-blue-800">
                                 <FontAwesomeIcon icon={faLinkedinIn}/>
                             </a>
-                            <a href="https://instagram.com/codechefvit" target="_blank"
+                            <a href="https://instagram.com/codechefvit" target="_blank" rel="noreferrer"
                                className="w-8 h-8 border border-2  border-gray-300 bg-gray-50 rounded-full text-center py-1 ml-2 text-black ease-in transition-all hover:text-white hover:bg-pink-600 hover:border-pink-600">
                                 <FontAwesomeIcon icon={faInstagram}/>
                             </a>
-                            <a href="https://youtube.com/codechefvit" target="_blank"
+                            <a href="https://youtube.com/codechefvit" target="_blank" rel="noreferrer"
                                className="w-8 h-8 border border-2  border-gray-300 bg-gray-50 rounded-full text-center py-1 ml-2 text-black ease-in transition-all hover:text-white hover:bg-red-600 hover:border-red-600">
                                 <FontAwesomeIcon icon={faYoutube}/>
                             </a>
-                            <a href="https://github.com/CodeChefVIT" target="_blank"
+                            <a href="https://github.com/CodeChefVIT" target="_blank" rel="noreferrer"
                                className="w-8 h-8 border border-2 border-gray-300 bg-gray-50 rounded-full text-center py-1 ml-2 text-black ease-in transition-all hover:text-white hover:bg-gray-800 hover:border-black">
                                 <FontAwesomeIcon icon={faGithub}/>
                             </a>
-                            <a href="https://medium.com/codechef-vit" target="_blank"
+                            <a href="https://medium.com/codechef-vit" target="_blank" rel="noreferrer"
                                className="w-8 h-8 border border-2 border-gray-300 bg-gray-50 rounded-full text-center py-1 ml-2 text-black ease-in transition-all hover:text-white hover:bg-black hover:border-black">
                                 <FontAwesomeIcon icon={faMediumM}/>
                             </a>
