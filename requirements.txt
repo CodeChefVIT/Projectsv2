@@ -15,7 +15,7 @@ colorama==0.4.4
 cryptography==3.4.7
 defusedxml==0.7.1
 dj-database-url==0.5.0
-Django==3.2.5
+Django==3.2.12
 django-cors-headers==3.7.0
 django-heroku==0.3.1
 djangorestframework==3.12.4
