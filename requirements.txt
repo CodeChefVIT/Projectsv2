@@ -21,7 +21,7 @@ django-heroku==0.3.1
 djangorestframework==3.12.4
 gunicorn==20.1.0
 idna==2.10
-jwcrypto==0.8
+jwcrypto==1.4
 kombu==5.1.0
 mypy-extensions==0.4.3
 oauthlib==3.1.0
